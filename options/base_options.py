@@ -33,6 +33,11 @@ class BaseOptions:
         )
         parser.add_argument("--use_wandb", action="store_true", help="use wandb")
         parser.add_argument(
+            "--wandb_project_name",
+            default="CycleGAN-and-pix2pix",
+            help="select project name",
+        )
+        parser.add_argument(
             "--gpu_ids",
             type=str,
             default="0",
