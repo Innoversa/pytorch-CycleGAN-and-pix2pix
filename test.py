@@ -91,7 +91,7 @@ if __name__ == "__main__":
         model.test()  # run inference
         visuals = model.get_current_visuals()  # get image results
         img_path = model.get_image_paths()  # get image paths
-        if i % 5 == 0:  # save images to an HTML file
+        if i % min(50, int(opt.num_test / 10)) == 0:  # save images to an HTML file
             print("processing (%04d)-th image... %s" % (i, img_path))
         save_images(
             webpage,
